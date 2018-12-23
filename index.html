@@ -61,6 +61,7 @@
 			<option value="2">STANDARD WHITE</option>
 			<option value="3">DUTCH ORANGE</option>
 			<option value="4">INTENSE GREE</option>
+			<option value="5">TRAFIC RED</option>
 			</select>
 	</td>
     <td>
@@ -70,6 +71,7 @@
 			<option value="2">STANDARD WHITE</option>
 			<option value="3">DUTCH ORANGE</option>
 			<option value="4">INTENSE GREE</option>
+			<option value="5">TRAFIC RED</option>
 			</select>
 	</td>
 	<td>
@@ -79,6 +81,7 @@
 			<option value="2">STANDARD WHITE</option>
 			<option value="3">DUTCH ORANGE</option>
 			<option value="4">INTENSE GREE</option>
+			<option value="5">TRAFIC RED</option>
 			</select>
 	</td>
   </tr>
@@ -123,6 +126,9 @@
 					case "4":
 						scene.children[4].material.color = new THREE.Color(0x72B431);						
 						break;
+					case "5":
+						scene.children[4].material.color = new THREE.Color(0xbb1e10);						
+						break;
 				}
 				render();
 						
@@ -147,6 +153,9 @@
 					case "4":
 						scene.children[5].material.color = new THREE.Color(0x72B431);						
 						break;
+					case "5":
+						scene.children[5].material.color = new THREE.Color(0xbb1e10);						
+						break;
 				}
 				render();
 						
@@ -170,6 +179,9 @@
 						break;
 					case "4":
 						scene.children[6].material.color = new THREE.Color(0x72B431);						
+						break;
+					case "5":
+						scene.children[6].material.color = new THREE.Color(0xbb1e10);						
 						break;
 				}
 				render();
