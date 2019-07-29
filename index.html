@@ -988,7 +988,7 @@
 				camera = new THREE.PerspectiveCamera( 35, window.innerWidth / window.innerHeight, 1, 15 );
 				camera.position.set( 1, -0.2, 1 );
 
-				cameraTarget = new THREE.Vector3( 0, - 0.0, 0 );
+				cameraTarget = new THREE.Vector3( 0, - 0.25, 0 );
 
 				scene = new THREE.Scene();
 				scene.background = new THREE.Color( 0x72645b );
@@ -1019,7 +1019,8 @@
 					var part_1 = new THREE.Mesh( part_1_geometry, part_1_material );
 
 					part_1.position.set( -0.6, 0.5, 0);
-					part_1.rotation.set( - Math.PI / 2, 0, Math.PI / 2);
+					//part_1.rotation.set( - Math.PI / 2, 0, Math.PI / 2);
+					art_1.rotation.set( 0, 0,0);
 					part_1.scale.set( 0.006, 0.006, 0.006 );
 
 					part_1.castShadow = true;
