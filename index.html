@@ -254,6 +254,26 @@
 			<option value="15">LIGHT BROWN Pantone 4645C</option>
 			</select>
 	</td>
+		<td>
+	      <select id="SelectOption_p11" onchange="part_11_Function()">
+			<option value="0">BLUE GREY</option>
+			<option value="1">STANDARD BLACK</option>
+			<option value="2">STANDARD WHITE</option>
+			<option value="3">DUTCH ORANGE</option>
+			<option value="4">INTENSE GREE</option>
+			<option value="5">TRAFFIC RED</option>
+			<option value="6">ULTRA MARINE BLUE</option>
+			<option value="7">SHINING SILVER</option>
+			<option value="8">MAGENTA</option>
+			<option value="9">SKY BLUE RAL 5015</option>
+			<option value="10">SIGNAL YELLOW Pantone 7548C</option>
+			<option value="11">INTENSE GREEN Pantone 369C</option>
+			<option value="12">LEAF GREEN Pantone 349C</option>
+			<option value="13">OLIVE GREEN Pantone 7763C</option>
+			<option value="14">CHOCOLATE BROWN RAL 8017</option>
+			<option value="15">LIGHT BROWN Pantone 4645C</option>
+			</select>
+	</td>
   </tr>
 </table>
 
@@ -844,6 +864,62 @@
 				render();
 						
 			}
+			function part_11_Function(objectInput)
+			{
+				switch(document.getElementById('SelectOption_p11').value)
+				{
+					case "0":
+						scene.children[13].material.color = new THREE.Color(0x425563); 				
+						break;		
+					case "1":
+						scene.children[13].material.color = new THREE.Color(0x0e0e10);						
+						break;
+					case "2":
+						scene.children[13].material.color = new THREE.Color(0xf1ece1);						
+						break;
+					case "3":
+						scene.children[13].material.color = new THREE.Color(0xec7c26);						
+						break;
+					case "4":
+						scene.children[13].material.color = new THREE.Color(0x72B431);						
+						break;
+					case "5":
+						scene.children[13].material.color = new THREE.Color(0xbb1e10);						
+						break;
+					case "6":
+						scene.children[13].material.color = new THREE.Color(0x002D72);						
+						break;
+					case "7":
+						scene.children[13].material.color = new THREE.Color(0x797b7a);						
+						break;
+					case "8":
+						scene.children[13].material.color = new THREE.Color(0xC3167C);						
+						break;
+					case "9":
+						scene.children[13].material.color = new THREE.Color(0x007cb0);						
+						break;
+					case "10":
+						scene.children[13].material.color = new THREE.Color(0xFFC600);						
+						break;
+					case "11":
+						scene.children[13].material.color = new THREE.Color(0x72B431);						
+						break;
+					case "12":
+						scene.children[13].material.color = new THREE.Color(0x046A38);						
+						break;
+					case "13":
+						scene.children[13].material.color = new THREE.Color(0x535435);						
+						break;
+					case "14":
+						scene.children[13].material.color = new THREE.Color(0x442f29);						
+						break;
+					case "15":
+						scene.children[13].material.color = new THREE.Color(0xAD7C59);						
+						break;
+				}
+				render();
+						
+			}
 			
 			if ( WEBGL.isWebGLAvailable() === false ) {
 
@@ -1046,6 +1122,21 @@
 					part_10.receiveShadow = true;
 
 					scene.add( part_10 );
+				} );
+				
+				loader.load( './models/p11.stl', function ( part_11_geometry ) {
+				
+					var part_11_material = new THREE.MeshPhongMaterial( { color: 0x72B431, specular: 0x111111, shininess: 10 } );
+					var part_11 = new THREE.Mesh( part_11_geometry, part_11_material );
+
+					part_11.position.set( -0.6, 0.5, 0 );
+					part_11.rotation.set( - Math.PI / 2, 0, Math.PI / 2 );
+					part_11.scale.set( 0.006, 0.006, 0.006  );
+
+					part_11.castShadow = true;
+					part_11.receiveShadow = true;
+
+					scene.add( part_11 );
 				} );
 				
 				// Lights
