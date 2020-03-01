@@ -251,7 +251,7 @@ html {
     }
 
     .info__message {
-        display: right;
+        display: left;
     }
 
     .options {
