@@ -1,1 +1,520 @@
-const _0x9a84=['appendChild','onmousemove','data-key','width','event','nameID','enablePan','clientHeight','HemisphereLight','background','devicePixelRatio','enabled','getElementById','querySelectorAll','677d95','tray__swatch','0A0A0A','Vector2','touchstart','repeat','addEventListener','js-drag-notice','chair.glb','fe35c3','start','fog','option','offsetLeft','setSize','remove','clientWidth','castShadow','EC7C26','style','2da044','clientX','target','innerWidth','828282','WebGLRenderer','mapSize','type','maxPolarAngle','left','MeshPhongMaterial','PerspectiveCamera','shadowMap','error','autoRotateSpeed','Mesh','getElementsByClassName','scene','.tray__swatch','div','url(','P10','append','enableDamping','wrapS','update','dampingFactor','touches','js-loader','Fog','autoRotate','body','.option','--is-active','set','material','b4e929','size','traverse','receiveShadow','minPolarAngle','onmouseup','0aafff','load','touchend','OrbitControls','click','PlaneGeometry','RepeatWrapping','offsetWidth','dataset','Scene','innerHeight','setAttribute','childID','key','rotation','js-tray-slide','shininess','add','wrapT','12a28c','texture','position','name','classList','GLTFLoader','color','domElement','isMesh','Color','onmousedown','TextureLoader','shadow','touchmove','052692','entries'];(function(_0xfba83,_0x9a8464){const _0x3871af=function(_0x275bcf){while(--_0x275bcf){_0xfba83['push'](_0xfba83['shift']());}};_0x3871af(++_0x9a8464);}(_0x9a84,0x68));const _0x3871=function(_0xfba83,_0x9a8464){_0xfba83=_0xfba83-0x0;let _0x3871af=_0x9a84[_0xfba83];return _0x3871af;};const LOADER=document[_0x3871('0x13')](_0x3871('0x45'));const TRAY=document[_0x3871('0x13')](_0x3871('0x62'));const DRAG_NOTICE=document['getElementById'](_0x3871('0x1c'));var theModel;const MODEL_PATH=_0x3871('0x1d');var activeOption='P1';var loaded=![];const colors=[{'color':_0x3871('0x17')},{'color':'FFFFFF'},{'color':_0x3871('0x5')},{'color':'fee126'},{'color':_0x3871('0x27')},{'color':'CC0605'},{'color':_0x3871('0x4d')},{'color':_0x3871('0x2d')},{'color':_0x3871('0x15')},{'color':_0x3871('0x53')},{'color':_0x3871('0x29')},{'color':_0x3871('0x66')},{'color':'cec18f'},{'color':_0x3871('0x1e')}];const BACKGROUND_COLOR=0xf1f1f1;const scene=new THREE[(_0x3871('0x5c'))]();scene[_0x3871('0x10')]=new THREE[(_0x3871('0x0'))](BACKGROUND_COLOR);scene[_0x3871('0x20')]=new THREE[(_0x3871('0x46'))](BACKGROUND_COLOR,0x14,0x64);const canvas=document['querySelector']('#c');const renderer=new THREE[(_0x3871('0x2e'))]({'canvas':canvas,'antialias':!![]});renderer[_0x3871('0x35')][_0x3871('0x12')]=!![];renderer['setPixelRatio'](window['devicePixelRatio']);var cameraFar=0x5;document[_0x3871('0x48')][_0x3871('0x7')](renderer[_0x3871('0x6d')]);var camera=new THREE[(_0x3871('0x34'))](0x32,window[_0x3871('0x2c')]/window[_0x3871('0x5d')],0.1,0x3e8);camera[_0x3871('0x68')]['z']=cameraFar;camera[_0x3871('0x68')]['x']=0x0;const INITIAL_MTL=new THREE[(_0x3871('0x33'))]({'color':0xf1f1f1,'shininess':0x32});const INITIAL_MAP=[{'childID':'P1','mtl':INITIAL_MTL},{'childID':'P2','mtl':INITIAL_MTL},{'childID':'P3','mtl':INITIAL_MTL},{'childID':'P4','mtl':INITIAL_MTL},{'childID':'P5','mtl':INITIAL_MTL},{'childID':'P6','mtl':INITIAL_MTL},{'childID':'P7','mtl':INITIAL_MTL},{'childID':'P8','mtl':INITIAL_MTL},{'childID':'P9','mtl':INITIAL_MTL},{'childID':_0x3871('0x3e'),'mtl':INITIAL_MTL},{'childID':'P11','mtl':INITIAL_MTL}];var loader=new THREE[(_0x3871('0x6b'))]();loader[_0x3871('0x54')](MODEL_PATH,function(_0x302042){theModel=_0x302042[_0x3871('0x3a')];theModel[_0x3871('0x4f')](_0xed92b=>{if(_0xed92b[_0x3871('0x6e')]){_0xed92b[_0x3871('0x26')]=![];_0xed92b[_0x3871('0x50')]=!![];}});theModel['scale']['set'](0x2,0x2,0x2);theModel[_0x3871('0x61')]['y']=Math['PI'];theModel[_0x3871('0x68')]['y']=-0x1;for(let _0x208b20 of INITIAL_MAP){initColor(theModel,_0x208b20[_0x3871('0x5f')],_0x208b20['mtl']);}scene['add'](theModel);LOADER['remove']();},undefined,function(_0x27d22c){console[_0x3871('0x36')](_0x27d22c);});function initColor(_0x1b38e2,_0x24823c,_0x32cbd9){_0x1b38e2[_0x3871('0x4f')](_0x1c7924=>{if(_0x1c7924[_0x3871('0x6e')]){if(_0x1c7924[_0x3871('0x69')]['includes'](_0x24823c)){_0x1c7924[_0x3871('0x4c')]=_0x32cbd9;_0x1c7924['nameID']=_0x24823c;}}});}var hemiLight=new THREE[(_0x3871('0xf'))](0xffffff,0xffffff,0.61);hemiLight['position'][_0x3871('0x4b')](0x0,0x32,0x0);scene[_0x3871('0x64')](hemiLight);var dirLight=new THREE['DirectionalLight'](0xffffff,0.54);dirLight[_0x3871('0x68')][_0x3871('0x4b')](-0x8,0xc,0x8);dirLight[_0x3871('0x26')]=!![];dirLight[_0x3871('0x3')][_0x3871('0x2f')]=new THREE[(_0x3871('0x18'))](0x400,0x400);scene[_0x3871('0x64')](dirLight);var floorGeometry=new THREE[(_0x3871('0x58'))](0x1388,0x1388,0x1,0x1);var floorMaterial=new THREE['MeshPhongMaterial']({'color':0xeeeeee,'shininess':0x0});var floor=new THREE[(_0x3871('0x38'))](floorGeometry,floorMaterial);floor[_0x3871('0x61')]['x']=-0.5*Math['PI'];floor[_0x3871('0x50')]=!![];floor[_0x3871('0x68')]['y']=-0x1;scene['add'](floor);var controls=new THREE[(_0x3871('0x56'))](camera,renderer[_0x3871('0x6d')]);controls[_0x3871('0x31')]=Math['PI']/0x2;controls[_0x3871('0x51')]=Math['PI']/0x3;controls[_0x3871('0x40')]=!![];controls[_0x3871('0xd')]=![];controls[_0x3871('0x43')]=0.1;controls[_0x3871('0x47')]=![];controls[_0x3871('0x37')]=0.2;function animate(){controls[_0x3871('0x42')]();renderer['render'](scene,camera);requestAnimationFrame(animate);if(resizeRendererToDisplaySize(renderer)){const _0x457e58=renderer[_0x3871('0x6d')];camera['aspect']=_0x457e58[_0x3871('0x25')]/_0x457e58[_0x3871('0xe')];camera['updateProjectionMatrix']();}if(theModel!=null&&loaded==![]){initialRotation();DRAG_NOTICE[_0x3871('0x6a')][_0x3871('0x64')](_0x3871('0x1f'));}}animate();function resizeRendererToDisplaySize(_0x312b7b){const _0x256d07=_0x312b7b[_0x3871('0x6d')];var _0x1c9298=window['innerWidth'];var _0x2d7a45=window[_0x3871('0x5d')];var _0x9629f5=_0x256d07[_0x3871('0xa')]/window[_0x3871('0x11')];var _0x2daa13=_0x256d07['height']/window[_0x3871('0x11')];const _0x312db4=_0x9629f5!==_0x1c9298||_0x2daa13!==_0x2d7a45;if(_0x312db4){_0x312b7b[_0x3871('0x23')](_0x1c9298,_0x2d7a45,![]);}return _0x312db4;}function buildColors(_0x13cca6){for(let [_0x3e3afb,_0xa43562]of _0x13cca6[_0x3871('0x6')]()){let _0x5abad7=document['createElement'](_0x3871('0x3c'));_0x5abad7[_0x3871('0x6a')][_0x3871('0x64')](_0x3871('0x16'));if(_0xa43562[_0x3871('0x67')]){_0x5abad7[_0x3871('0x28')]['backgroundImage']=_0x3871('0x3d')+_0xa43562[_0x3871('0x67')]+')';}else{_0x5abad7[_0x3871('0x28')][_0x3871('0x10')]='#'+_0xa43562[_0x3871('0x6c')];}_0x5abad7[_0x3871('0x5e')](_0x3871('0x9'),_0x3e3afb);TRAY[_0x3871('0x3f')](_0x5abad7);}}buildColors(colors);const options=document['querySelectorAll'](_0x3871('0x49'));for(const option of options){option[_0x3871('0x1b')](_0x3871('0x57'),selectOption);}function selectOption(_0x2fd624){let _0x709bae=_0x2fd624[_0x3871('0x2b')];activeOption=_0x2fd624[_0x3871('0x2b')][_0x3871('0x5b')][_0x3871('0x21')];for(const _0x4f7014 of options){_0x4f7014[_0x3871('0x6a')][_0x3871('0x24')](_0x3871('0x4a'));}_0x709bae['classList'][_0x3871('0x64')](_0x3871('0x4a'));}const swatches=document[_0x3871('0x14')](_0x3871('0x3b'));for(const swatch of swatches){swatch[_0x3871('0x1b')](_0x3871('0x57'),selectSwatch);}function selectSwatch(_0x4e3620){let _0x5eca07=colors[parseInt(_0x4e3620['target'][_0x3871('0x5b')][_0x3871('0x60')])];let _0x51e3c0;if(_0x5eca07[_0x3871('0x67')]){let _0x1f1061=new THREE[(_0x3871('0x2'))]()[_0x3871('0x54')](_0x5eca07[_0x3871('0x67')]);_0x1f1061[_0x3871('0x1a')][_0x3871('0x4b')](_0x5eca07[_0x3871('0x4e')][0x0],_0x5eca07[_0x3871('0x4e')][0x1],_0x5eca07['size'][0x2]);_0x1f1061[_0x3871('0x41')]=THREE[_0x3871('0x59')];_0x1f1061[_0x3871('0x65')]=THREE[_0x3871('0x59')];_0x51e3c0=new THREE[(_0x3871('0x33'))]({'map':_0x1f1061,'shininess':_0x5eca07[_0x3871('0x63')]?_0x5eca07['shininess']:0xa});}else{_0x51e3c0=new THREE[(_0x3871('0x33'))]({'color':parseInt('0x'+_0x5eca07[_0x3871('0x6c')]),'shininess':_0x5eca07[_0x3871('0x63')]?_0x5eca07[_0x3871('0x63')]:0xa});}setMaterial(theModel,activeOption,_0x51e3c0);}function setMaterial(_0x31bad8,_0xf66e98,_0x5d2c2d){_0x31bad8[_0x3871('0x4f')](_0x3c2357=>{if(_0x3c2357[_0x3871('0x6e')]&&_0x3c2357[_0x3871('0xc')]!=null){if(_0x3c2357[_0x3871('0xc')]==_0xf66e98){_0x3c2357[_0x3871('0x4c')]=_0x5d2c2d;}}});}let initRotate=0x0;function initialRotation(){initRotate++;if(initRotate<=0x78){theModel[_0x3871('0x61')]['y']+=Math['PI']/0x3c;}else{loaded=!![];}}var slider=document['getElementById']('js-tray'),sliderItems=document[_0x3871('0x13')]('js-tray-slide'),difference;function slide(_0x411d00,_0x1b7856){var _0x450f47=0x0,_0x2f3767=0x0,_0x2e7de8,_0x358d12=0x14,_0x53fccd,_0x4de68e=_0x1b7856[_0x3871('0x39')](_0x3871('0x16'));_0x1b7856[_0x3871('0x1')]=_0x1ffaf0;_0x1b7856['addEventListener']('touchstart',_0x1ffaf0);_0x1b7856[_0x3871('0x1b')](_0x3871('0x55'),_0x22affe);_0x1b7856[_0x3871('0x1b')](_0x3871('0x4'),_0x41cf4c);function _0x1ffaf0(_0x3fa16d){_0x3fa16d=_0x3fa16d||window['event'];_0x2e7de8=_0x1b7856[_0x3871('0x22')];difference=sliderItems['offsetWidth']-slider[_0x3871('0x5a')];difference=difference*-0x1;if(_0x3fa16d[_0x3871('0x30')]==_0x3871('0x19')){_0x450f47=_0x3fa16d[_0x3871('0x44')][0x0][_0x3871('0x2a')];}else{_0x450f47=_0x3fa16d[_0x3871('0x2a')];document[_0x3871('0x52')]=_0x22affe;document[_0x3871('0x8')]=_0x41cf4c;}}function _0x41cf4c(_0x5b812b){_0x5b812b=_0x5b812b||window[_0x3871('0xb')];if(_0x5b812b[_0x3871('0x30')]==_0x3871('0x4')){_0x2f3767=_0x450f47-_0x5b812b[_0x3871('0x44')][0x0][_0x3871('0x2a')];_0x450f47=_0x5b812b[_0x3871('0x44')][0x0][_0x3871('0x2a')];}else{_0x2f3767=_0x450f47-_0x5b812b[_0x3871('0x2a')];_0x450f47=_0x5b812b[_0x3871('0x2a')];}if(_0x1b7856[_0x3871('0x22')]-_0x2f3767<=0x0&&_0x1b7856['offsetLeft']-_0x2f3767>=difference){_0x1b7856[_0x3871('0x28')]['left']=_0x1b7856[_0x3871('0x22')]-_0x2f3767+'px';}}function _0x22affe(_0x5ad0e7){_0x53fccd=_0x1b7856[_0x3871('0x22')];if(_0x53fccd-_0x2e7de8<-_0x358d12){}else if(_0x53fccd-_0x2e7de8>_0x358d12){}else{_0x1b7856['style'][_0x3871('0x32')]=_0x2e7de8+'px';}document['onmouseup']=null;document[_0x3871('0x8')]=null;}}slide(slider,sliderItems);
+const LOADER = document.getElementById('js-loader');
+
+const TRAY = document.getElementById('js-tray-slide');
+const DRAG_NOTICE = document.getElementById('js-drag-notice');
+
+var theModel;
+
+const MODEL_PATH = "chair.glb";
+
+var activeOption = 'P1';
+var loaded = false;
+
+const colors = [
+//{
+//  texture: 'img/wood_.jpg',
+//  size: [2, 2, 2],
+//  shininess: 60 },
+
+//{
+//  texture: 'img/fabric_.jpg',
+//  size: [4, 4, 4],
+//  shininess: 0 },
+
+//{
+//  texture: 'img/pattern_.jpg',
+//  size: [8, 8, 8],
+//  shininess: 10 },
+
+//{
+//  texture: 'img/denim_.jpg',
+//  size: [3, 3, 3],
+//  shininess: 0 },
+
+//{
+//  texture: 'img/quilt_.jpg',
+//  size: [6, 6, 6],
+//  shininess: 0 },
+
+//STANDARD BLACK
+{
+  color: '0A0A0A' },
+//STANDARD WHITE
+{
+  color: 'FFFFFF' },
+//ULTRA MARINE BLUE
+{
+  color: '052692' },  
+//SIGNAL YELLOW
+{
+  color: 'fee126' },  
+//DUTCH ORANGE
+{
+  color: 'EC7C26' },  
+//TRAFFIC RED
+{
+  color: 'CC0605' },  
+//INTENSE GREEN
+{
+  color: 'b4e929' },  
+//SHINING SILVER
+{
+  color: '828282' },
+
+//PLA--------- 
+ 
+//BLUE GREY
+{
+  color: '677d95' },
+//SKY BLUE
+{
+  color: '0aafff' },
+
+//LEAF GREEN
+{
+  color: '2da044' },
+//MINT TURQOISE
+{
+  color: '12a28c' },
+//PALE GOLD
+{
+  color: 'cec18f' },
+//FLUORESCENT PINK
+{
+  color: 'fe35c3' },
+//OLIVE GREEN
+{
+  color: '939774' },
+
+//{
+//  color: '565F59' },
+
+//{
+//  color: 'CB304A' },
+
+//{
+//  color: 'FED7C8' },
+
+//{
+//  color: 'C7BDBD' },
+
+//{
+//  color: '3DCBBE' },
+
+//{
+//  color: '264B4F' },
+
+//{
+//  color: '389389' },
+
+//{
+//  color: '85BEAE' },
+
+//{
+//  color: 'F2DABA' },
+
+//{
+//  color: 'F2A97F' },
+
+//{
+//  color: 'D85F52' },
+
+//{
+//  color: 'D92E37' },
+
+//{
+//  color: 'FC9736' },
+
+//{
+//  color: 'F7BD69' },
+
+//{
+//  color: 'A4D09C' },
+
+//{
+//  color: '4C8A67' },
+
+//{
+//  color: '25608A' },
+
+//{
+//  color: '75C8C6' },
+
+//{
+//  color: 'F5E4B7' },
+
+//{
+//  color: 'E69041' },
+
+//{
+//  color: 'E56013' },
+
+//{
+//  color: '11101D' },
+
+//{
+//  color: '630609' },
+
+//{
+//  color: 'C9240E' },
+
+//{
+//  color: 'EC4B17' },
+
+//{
+//  color: '281A1C' },
+
+//{
+//  color: '4F556F' },
+
+//{
+//  color: '64739B' },
+
+//{
+//  color: 'CDBAC7' },
+
+//{
+//  color: '946F43' },
+
+//{
+//  color: '66533C' },
+
+//{
+//  color: '173A2F' },
+
+//{
+//  color: '153944' },
+
+//{
+//  color: '27548D' },
+
+//{
+//  color: '438AAC' }
+];
+
+
+
+
+const BACKGROUND_COLOR = 0xf1f1f1;
+// Init the scene
+const scene = new THREE.Scene();
+// Set background
+scene.background = new THREE.Color(BACKGROUND_COLOR);
+scene.fog = new THREE.Fog(BACKGROUND_COLOR, 20, 100);
+
+const canvas = document.querySelector('#c');
+
+// Init the renderer
+const renderer = new THREE.WebGLRenderer({ canvas, antialias: true });
+
+renderer.shadowMap.enabled = true;
+renderer.setPixelRatio(window.devicePixelRatio);
+
+var cameraFar = 5;
+
+document.body.appendChild(renderer.domElement);
+
+// Add a camera
+var camera = new THREE.PerspectiveCamera(50, window.innerWidth / window.innerHeight, 0.1, 1000);
+camera.position.z = cameraFar;
+camera.position.x = 0;
+
+// Initial material
+const INITIAL_MTL = new THREE.MeshPhongMaterial({ color: 0xf1f1f1, shininess: 50 });
+
+const INITIAL_MAP = [
+{ childID: "P1", mtl: INITIAL_MTL },
+{ childID: "P2", mtl: INITIAL_MTL },
+{ childID: "P3", mtl: INITIAL_MTL },
+{ childID: "P4", mtl: INITIAL_MTL },
+{ childID: "P5", mtl: INITIAL_MTL },
+{ childID: "P6", mtl: INITIAL_MTL },
+{ childID: "P7", mtl: INITIAL_MTL },
+{ childID: "P8", mtl: INITIAL_MTL },
+{ childID: "P9", mtl: INITIAL_MTL },
+{ childID: "P10", mtl: INITIAL_MTL },
+{ childID: "P11", mtl: INITIAL_MTL }];
+
+
+// Init the object loader
+var loader = new THREE.GLTFLoader();
+
+loader.load(MODEL_PATH, function (gltf) {
+  theModel = gltf.scene;
+
+  theModel.traverse(o => {
+    if (o.isMesh) {
+      o.castShadow = false;
+      o.receiveShadow = true;
+    }
+  });
+
+  // Set the models initial scale   
+  theModel.scale.set(2, 2, 2);
+  theModel.rotation.y = Math.PI;
+
+  // Offset the y position a bit
+  theModel.position.y = -1;
+
+  // Set initial textures
+  for (let object of INITIAL_MAP) {
+    initColor(theModel, object.childID, object.mtl);
+  }
+
+  // Add the model to the scene
+  scene.add(theModel);
+
+  // Remove the loader
+  LOADER.remove();
+
+}, undefined, function (error) {
+  console.error(error);
+});
+
+// Function - Add the textures to the models
+function initColor(parent, type, mtl) {
+  parent.traverse(o => {
+    if (o.isMesh) {
+      if (o.name.includes(type)) {
+        o.material = mtl;
+        o.nameID = type; // Set a new property to identify this object
+      }
+    }
+  });
+}
+
+// Add lights
+var hemiLight = new THREE.HemisphereLight(0xffffff, 0xffffff, 0.61);
+hemiLight.position.set(0, 50, 0);
+// Add hemisphere light to scene   
+scene.add(hemiLight);
+
+var dirLight = new THREE.DirectionalLight(0xffffff, 0.54);
+dirLight.position.set(-8, 12, 8);
+dirLight.castShadow = true;
+dirLight.shadow.mapSize = new THREE.Vector2(1024, 1024);
+// Add directional Light to scene    
+scene.add(dirLight);
+
+// Floor
+var floorGeometry = new THREE.PlaneGeometry(5000, 5000, 1, 1);
+var floorMaterial = new THREE.MeshPhongMaterial({
+  color: 0xeeeeee,
+  shininess: 0 });
+
+
+var floor = new THREE.Mesh(floorGeometry, floorMaterial);
+floor.rotation.x = -0.5 * Math.PI;
+floor.receiveShadow = true;
+floor.position.y = -1;
+scene.add(floor);
+
+// Add controls
+var controls = new THREE.OrbitControls(camera, renderer.domElement);
+controls.maxPolarAngle = Math.PI / 2;
+controls.minPolarAngle = Math.PI / 3;
+controls.enableDamping = true;
+controls.enablePan = false;
+controls.dampingFactor = 0.1;
+controls.autoRotate = false; // Toggle this if you'd like the chair to automatically rotate
+controls.autoRotateSpeed = 0.2; // 30
+
+function animate() {
+
+  controls.update();
+  renderer.render(scene, camera);
+  requestAnimationFrame(animate);
+
+  if (resizeRendererToDisplaySize(renderer)) {
+    const canvas = renderer.domElement;
+    camera.aspect = canvas.clientWidth / canvas.clientHeight;
+    camera.updateProjectionMatrix();
+  }
+
+  if (theModel != null && loaded == false) {
+    initialRotation();
+    DRAG_NOTICE.classList.add('start');
+  }
+}
+
+animate();
+
+// Function - New resizing method
+function resizeRendererToDisplaySize(renderer) {
+  const canvas = renderer.domElement;
+  var width = window.innerWidth;
+  var height = window.innerHeight;
+  var canvasPixelWidth = canvas.width / window.devicePixelRatio;
+  var canvasPixelHeight = canvas.height / window.devicePixelRatio;
+
+  const needResize = canvasPixelWidth !== width || canvasPixelHeight !== height;
+  if (needResize) {
+
+    renderer.setSize(width, height, false);
+  }
+  return needResize;
+}
+
+// Function - Build Colors
+
+function buildColors(colors) {
+  for (let [i, color] of colors.entries()) {
+    let swatch = document.createElement('div');
+    swatch.classList.add('tray__swatch');
+
+    if (color.texture)
+    {
+      swatch.style.backgroundImage = "url(" + color.texture + ")";
+    } else
+    {
+      swatch.style.background = "#" + color.color;
+    }
+
+    swatch.setAttribute('data-key', i);
+    TRAY.append(swatch);
+  }
+}
+
+buildColors(colors);
+
+// Select Option
+const options = document.querySelectorAll(".option");
+
+for (const option of options) {
+  option.addEventListener('click', selectOption);
+}
+
+function selectOption(e) {
+  let option = e.target;
+  activeOption = e.target.dataset.option;
+  for (const otherOption of options) {
+    otherOption.classList.remove('--is-active');
+  }
+  option.classList.add('--is-active');
+}
+
+// Swatches
+const swatches = document.querySelectorAll(".tray__swatch");
+
+for (const swatch of swatches) {
+  swatch.addEventListener('click', selectSwatch);
+}
+
+function selectSwatch(e) {
+  let color = colors[parseInt(e.target.dataset.key)];
+  let new_mtl;
+
+  if (color.texture) {
+
+    let txt = new THREE.TextureLoader().load(color.texture);
+
+    txt.repeat.set(color.size[0], color.size[1], color.size[2]);
+    txt.wrapS = THREE.RepeatWrapping;
+    txt.wrapT = THREE.RepeatWrapping;
+
+    new_mtl = new THREE.MeshPhongMaterial({
+      map: txt,
+      shininess: color.shininess ? color.shininess : 10 });
+
+  } else
+
+  {
+    new_mtl = new THREE.MeshPhongMaterial({
+      color: parseInt('0x' + color.color),
+      shininess: color.shininess ? color.shininess : 10 });
+
+
+  }
+
+  setMaterial(theModel, activeOption, new_mtl);
+}
+
+function setMaterial(parent, type, mtl) {
+  parent.traverse(o => {
+    if (o.isMesh && o.nameID != null) {
+      if (o.nameID == type) {
+        o.material = mtl;
+      }
+    }
+  });
+}
+
+// Function - Opening rotate
+let initRotate = 0;
+
+function initialRotation() {
+  initRotate++;
+  if (initRotate <= 120) {
+    theModel.rotation.y += Math.PI / 60;
+  } else {
+    loaded = true;
+  }
+}
+
+var slider = document.getElementById('js-tray'),sliderItems = document.getElementById('js-tray-slide'),difference;
+
+function slide(wrapper, items) {
+  var posX1 = 0,
+  posX2 = 0,
+  posInitial,
+  threshold = 20,
+  posFinal,
+  slides = items.getElementsByClassName('tray__swatch');
+
+  // Mouse events
+  items.onmousedown = dragStart;
+
+  // Touch events
+  items.addEventListener('touchstart', dragStart);
+  items.addEventListener('touchend', dragEnd);
+  items.addEventListener('touchmove', dragAction);
+
+
+  function dragStart(e) {
+    e = e || window.event;
+    posInitial = items.offsetLeft;
+    difference = sliderItems.offsetWidth - slider.offsetWidth;
+    difference = difference * -1;
+
+    if (e.type == 'touchstart') {
+      posX1 = e.touches[0].clientX;
+    } else {
+      posX1 = e.clientX;
+      document.onmouseup = dragEnd;
+      document.onmousemove = dragAction;
+    }
+  }
+
+  function dragAction(e) {
+    e = e || window.event;
+
+    if (e.type == 'touchmove') {
+      posX2 = posX1 - e.touches[0].clientX;
+      posX1 = e.touches[0].clientX;
+    } else {
+      posX2 = posX1 - e.clientX;
+      posX1 = e.clientX;
+    }
+
+    if (items.offsetLeft - posX2 <= 0 && items.offsetLeft - posX2 >= difference) {
+      items.style.left = items.offsetLeft - posX2 + "px";
+    }
+  }
+
+  function dragEnd(e) {
+    posFinal = items.offsetLeft;
+    if (posFinal - posInitial < -threshold) {
+
+    } else if (posFinal - posInitial > threshold) {
+
+    } else {
+      items.style.left = posInitial + "px";
+    }
+
+    document.onmouseup = null;
+    document.onmousemove = null;
+  }
+
+}
+
+slide(slider, sliderItems);
