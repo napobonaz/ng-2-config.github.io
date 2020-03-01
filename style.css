@@ -168,8 +168,8 @@ html {
 }
 
 .drag-notice.start {
-    -webkit-animation: popout 0.25s 3s forwards;
-    animation: popout 0.25s 3s forwards;
+    -webkit-animation: popout 0.25s 10s forwards;
+    animation: popout 0.25s 10s forwards;
 }
 
 @-webkit-keyframes popout {
