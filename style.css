@@ -155,8 +155,8 @@ html {
     justify-content: center;
     align-items: center;
     padding: 2em;
-    width: 20em;
-    height: 20em;
+    width: 14em;
+    height: 14em;
     box-sizing: border-box;
     font-size: 0.9em;
     font-weight: 800;
@@ -168,8 +168,8 @@ html {
 }
 
 .drag-notice.start {
-    -webkit-animation: popout 5.25s 10s forwards;
-    animation: popout 5.25s 10s forwards;
+    -webkit-animation: popout 3.25s 10s forwards;
+    animation: popout 3.25s 10s forwards;
 }
 
 @-webkit-keyframes popout {
