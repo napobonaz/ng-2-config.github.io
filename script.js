@@ -12,7 +12,7 @@ var loaded = false;
 
 const colors = [
 {
-  texture: '/img/cage_black.jpg',
+  texture: 'https://raw.githubusercontent.com/napobonaz/ng-2-config.github.io/master/img/cage_black.jpg',
   size: [4, 4, 4],
   shininess: 0 },
 
