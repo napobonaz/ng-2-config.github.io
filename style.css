@@ -146,7 +146,7 @@ html {
     background-position: center;
 }
 
-.tray__swatch:nth-child(7n+7) {
+.tray__swatch:nth-child(8n+8) {
     margin-right: 100px;
 }
 
@@ -155,8 +155,8 @@ html {
     justify-content: center;
     align-items: center;
     padding: 2em;
-    width: 14em;
-    height: 14em;
+    width: 10em;
+    height: 10em;
     box-sizing: border-box;
     font-size: 0.9em;
     font-weight: 800;
@@ -168,8 +168,8 @@ html {
 }
 
 .drag-notice.start {
-    -webkit-animation: popout 3.25s 10s forwards;
-    animation: popout 3.25s 10s forwards;
+    -webkit-animation: popout 0.25s 3s forwards;
+    animation: popout 0.25s 3s forwards;
 }
 
 @-webkit-keyframes popout {
