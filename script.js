@@ -17,123 +17,123 @@ const colors = [
   shininess: 0 },
 
 {
-  texture: '/img/cage_blue.jpg',
+  texture: 'https://raw.githubusercontent.com/napobonaz/ng-2-config.github.io/master//img/cage_blue.jpg',
   size: [4, 4, 4],
   shininess: 0 },
   
 {
-  texture: '/img/cage_green.jpg',
+  texture: 'https://raw.githubusercontent.com/napobonaz/ng-2-config.github.io/master//img/cage_green.jpg',
   size: [4, 4, 4],
   shininess: 0 },
   
 {
-  texture: '/img/cage_white.jpg',
+  texture: 'https://raw.githubusercontent.com/napobonaz/ng-2-config.github.io/master//img/cage_white.jpg',
   size: [4, 4, 4],
   shininess: 0 },
   
 {
-  texture: '/img/cage_orange.jpg',
+  texture: 'https://raw.githubusercontent.com/napobonaz/ng-2-config.github.io/master//img/cage_orange.jpg',
   size: [4, 4, 4],
   shininess: 0 },
   
 {
-  texture: '/img/cage_rot.jpg',
+  texture: 'https://raw.githubusercontent.com/napobonaz/ng-2-config.github.io/master//img/cage_rot.jpg',
   size: [4, 4, 4],
   shininess: 0 }, 
 
 {
-  texture: '/img/cage_silver.jpg',
+  texture: 'https://raw.githubusercontent.com/napobonaz/ng-2-config.github.io/master//img/cage_silver.jpg',
   size: [4, 4, 4],
   shininess: 0 },    
   
 {
-  texture: '/img/cage_yellow.jpg',
+  texture: 'https://raw.githubusercontent.com/napobonaz/ng-2-config.github.io/master//img/cage_yellow.jpg',
   size: [4, 4, 4],
   shininess: 0 }, 
   
 //BODY COLORS
 {
-  texture: '/img/pla_army_green.jpg',
+  texture: 'https://raw.githubusercontent.com/napobonaz/ng-2-config.github.io/master//img/pla_army_green.jpg',
   size: [4, 4, 4],
   shininess: 0 }, 
   
 {
-  texture: '/img/pla_black.jpg',
+  texture: 'https://raw.githubusercontent.com/napobonaz/ng-2-config.github.io/master//img/pla_black.jpg',
   size: [4, 4, 4],
   shininess: 0 }, 
   
 {
-  texture: '/img/pla_blue.jpg',
+  texture: 'https://raw.githubusercontent.com/napobonaz/ng-2-config.github.io/master//img/pla_blue.jpg',
   size: [4, 4, 4],
   shininess: 0 },   
     
 {
-  texture: '/img/pla_brown.jpg',
+  texture: 'https://raw.githubusercontent.com/napobonaz/ng-2-config.github.io/master//img/pla_brown.jpg',
   size: [4, 4, 4],
   shininess: 0 },  
   
 {
-  texture: '/img/pla_green.jpg',
+  texture: 'https://raw.githubusercontent.com/napobonaz/ng-2-config.github.io/master//img/pla_green.jpg',
   size: [4, 4, 4],
   shininess: 0 },   
 
 {
-  texture: '/img/pla_grey.jpg',
+  texture: 'https://raw.githubusercontent.com/napobonaz/ng-2-config.github.io/master//img/pla_grey.jpg',
   size: [4, 4, 4],
   shininess: 0 },     
 
 {
-  texture: '/img/pla_ice_blue.jpg',
+  texture: 'https://raw.githubusercontent.com/napobonaz/ng-2-config.github.io/master//img/pla_ice_blue.jpg',
   size: [4, 4, 4],
   shininess: 0 }, 
 
 {
-  texture: '/img/pla_light_blue.jpg',
+  texture: 'https://raw.githubusercontent.com/napobonaz/ng-2-config.github.io/master//img/pla_light_blue.jpg',
   size: [4, 4, 4],
   shininess: 0 }, 
 
 {
-  texture: '/img/pla_magenta.jpg',
+  texture: 'https://raw.githubusercontent.com/napobonaz/ng-2-config.github.io/master//img/pla_magenta.jpg',
   size: [4, 4, 4],
   shininess: 0 }, 
 
 {
-  texture: '/img/pla_orange.jpg',
+  texture: 'https://raw.githubusercontent.com/napobonaz/ng-2-config.github.io/master//img/pla_orange.jpg',
   size: [4, 4, 4],
   shininess: 0 }, 
 
 {
-  texture: '/img/pla_pearl_white.jpg',
+  texture: 'https://raw.githubusercontent.com/napobonaz/ng-2-config.github.io/master//img/pla_pearl_white.jpg',
   size: [4, 4, 4],
   shininess: 0 }, 
 
 {
-  texture: '/img/pla_red.jpg',
+  texture: 'https://raw.githubusercontent.com/napobonaz/ng-2-config.github.io/master//img/pla_red.jpg',
   size: [4, 4, 4],
   shininess: 0 },  
 
 {
-  texture: '/img/pla_silver.jpg',
+  texture: 'https://raw.githubusercontent.com/napobonaz/ng-2-config.github.io/master//img/pla_silver.jpg',
   size: [4, 4, 4],
   shininess: 0 },     
   
 {
-  texture: '/img/pla_sky_blue.jpg',
+  texture: 'https://raw.githubusercontent.com/napobonaz/ng-2-config.github.io/master//img/pla_sky_blue.jpg',
   size: [4, 4, 4],
   shininess: 0 },     
   
 {
-  texture: '/img/pla_violet.jpg',
+  texture: 'https://raw.githubusercontent.com/napobonaz/ng-2-config.github.io/master//img/pla_violet.jpg',
   size: [4, 4, 4],
   shininess: 0 }, 
 
 {
-  texture: '/img/pla_white.jpg',
+  texture: 'https://raw.githubusercontent.com/napobonaz/ng-2-config.github.io/master//img/pla_white.jpg',
   size: [4, 4, 4],
   shininess: 0 },   
 
 {
-  texture: '/img/pla_yellow.jpg',
+  texture: 'https://raw.githubusercontent.com/napobonaz/ng-2-config.github.io/master//img/pla_yellow.jpg',
   size: [4, 4, 4],
   shininess: 0 }, 
 ];
